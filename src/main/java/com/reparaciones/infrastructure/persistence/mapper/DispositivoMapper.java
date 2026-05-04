@@ -11,6 +11,9 @@ public class DispositivoMapper {
         Dispositivo dispositivo = new Dispositivo(entity.getId(), entity.getTipo(), entity.getModeloId(), entity.getClienteId());
         dispositivo.setNumeroSerie(entity.getNumeroSerie());
         dispositivo.setImei(entity.getImei());
+        dispositivo.setCapacidad(entity.getCapacidad());
+        dispositivo.setTipoGas(entity.getTipoGas());
+        dispositivo.setVoltaje(entity.getVoltaje());
         dispositivo.setNotasTecnicas(entity.getNotasTecnicas());
         dispositivo.setCreatedAt(entity.getCreatedAt());
         dispositivo.setUpdatedAt(entity.getUpdatedAt());
@@ -27,6 +30,9 @@ public class DispositivoMapper {
         entity.setClienteId(domain.getClienteId());
         entity.setNumeroSerie(domain.getNumeroSerie());
         entity.setImei(domain.getImei());
+        entity.setCapacidad(domain.getCapacidad());
+        entity.setTipoGas(domain.getTipoGas());
+        entity.setVoltaje(domain.getVoltaje());
         entity.setNotasTecnicas(domain.getNotasTecnicas());
         entity.setCreatedAt(domain.getCreatedAt() != null ? domain.getCreatedAt() : LocalDateTime.now());
         entity.setUpdatedAt(LocalDateTime.now());

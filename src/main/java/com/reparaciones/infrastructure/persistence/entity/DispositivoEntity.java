@@ -27,6 +27,15 @@ public class DispositivoEntity {
 
     private String imei;
 
+    @Column(name = "capacidad")
+    private String capacidad;
+
+    @Column(name = "tipo_gas")
+    private String tipoGas;
+
+    @Column(name = "voltaje")
+    private String voltaje;
+
     @Column(name = "notas_tecnicas", columnDefinition = "TEXT")
     private String notasTecnicas;
 
@@ -51,6 +60,12 @@ public class DispositivoEntity {
     public void setNumeroSerie(String numeroSerie) { this.numeroSerie = numeroSerie; }
     public String getImei() { return imei; }
     public void setImei(String imei) { this.imei = imei; }
+    public String getCapacidad() { return capacidad; }
+    public void setCapacidad(String capacidad) { this.capacidad = capacidad; }
+    public String getTipoGas() { return tipoGas; }
+    public void setTipoGas(String tipoGas) { this.tipoGas = tipoGas; }
+    public String getVoltaje() { return voltaje; }
+    public void setVoltaje(String voltaje) { this.voltaje = voltaje; }
     public String getNotasTecnicas() { return notasTecnicas; }
     public void setNotasTecnicas(String notasTecnicas) { this.notasTecnicas = notasTecnicas; }
     public LocalDateTime getCreatedAt() { return createdAt; }
