@@ -2,6 +2,7 @@ package com.reparaciones.infrastructure.persistence.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import com.reparaciones.domain.model.CategoriaMarca;
 
 @Entity
 @Table(name = "marcas")
@@ -13,6 +14,10 @@ public class MarcaEntity {
 
     @Column(nullable = false, unique = true)
     private String nombre;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private CategoriaMarca categoria;
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;
@@ -27,6 +32,8 @@ public class MarcaEntity {
     public void setId(Long id) { this.id = id; }
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
+    public CategoriaMarca getCategoria() { return categoria; }
+    public void setCategoria(CategoriaMarca categoria) { this.categoria = categoria; }
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
     public LocalDateTime getUpdatedAt() { return updatedAt; }

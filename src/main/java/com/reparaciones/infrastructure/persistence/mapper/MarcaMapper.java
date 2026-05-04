@@ -8,7 +8,7 @@ public class MarcaMapper {
 
     public static Marca toDomain(MarcaEntity entity) {
         if (entity == null) return null;
-        Marca marca = new Marca(entity.getId(), entity.getNombre());
+        Marca marca = new Marca(entity.getId(), entity.getNombre(), entity.getCategoria());
         marca.setCreatedAt(entity.getCreatedAt());
         marca.setUpdatedAt(entity.getUpdatedAt());
         marca.setCreatedBy(entity.getCreatedBy());
@@ -20,6 +20,7 @@ public class MarcaMapper {
         MarcaEntity entity = new MarcaEntity();
         entity.setId(domain.getId());
         entity.setNombre(domain.getNombre());
+        entity.setCategoria(domain.getCategoria());
         entity.setCreatedAt(domain.getCreatedAt() != null ? domain.getCreatedAt() : LocalDateTime.now());
         entity.setUpdatedAt(LocalDateTime.now());
         entity.setCreatedBy(domain.getCreatedBy());

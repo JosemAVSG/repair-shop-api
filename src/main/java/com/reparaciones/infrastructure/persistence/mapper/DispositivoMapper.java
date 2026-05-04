@@ -8,7 +8,7 @@ public class DispositivoMapper {
 
     public static Dispositivo toDomain(DispositivoEntity entity) {
         if (entity == null) return null;
-        Dispositivo dispositivo = new Dispositivo(entity.getId(), entity.getModeloId(), entity.getClienteId());
+        Dispositivo dispositivo = new Dispositivo(entity.getId(), entity.getTipo(), entity.getModeloId(), entity.getClienteId());
         dispositivo.setNumeroSerie(entity.getNumeroSerie());
         dispositivo.setImei(entity.getImei());
         dispositivo.setNotasTecnicas(entity.getNotasTecnicas());
@@ -22,6 +22,7 @@ public class DispositivoMapper {
         if (domain == null) return null;
         DispositivoEntity entity = new DispositivoEntity();
         entity.setId(domain.getId());
+        entity.setTipo(domain.getTipo());
         entity.setModeloId(domain.getModeloId());
         entity.setClienteId(domain.getClienteId());
         entity.setNumeroSerie(domain.getNumeroSerie());

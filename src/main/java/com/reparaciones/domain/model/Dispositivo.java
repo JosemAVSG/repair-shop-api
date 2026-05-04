@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 public class Dispositivo {
     private Long id;
+    private TipoDispositivo tipo;
     private Long modeloId;
     private Long clienteId;
     private String numeroSerie;
@@ -15,14 +16,17 @@ public class Dispositivo {
 
     public Dispositivo() {}
 
-    public Dispositivo(Long id, Long modeloId, Long clienteId) {
+    public Dispositivo(Long id, TipoDispositivo tipo, Long modeloId, Long clienteId) {
         this.id = id;
+        this.tipo = tipo;
         this.modeloId = modeloId;
         this.clienteId = clienteId;
     }
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
+    public TipoDispositivo getTipo() { return tipo; }
+    public void setTipo(TipoDispositivo tipo) { this.tipo = tipo; }
     public Long getModeloId() { return modeloId; }
     public void setModeloId(Long modeloId) { this.modeloId = modeloId; }
     public Long getClienteId() { return clienteId; }

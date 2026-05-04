@@ -1,6 +1,7 @@
 package com.reparaciones.api.controller;
 
 import com.reparaciones.domain.model.Marca;
+import com.reparaciones.domain.model.CategoriaMarca;
 import com.reparaciones.domain.repository.MarcaRepository;
 import com.reparaciones.api.dto.*;
 import jakarta.validation.Valid;
@@ -38,6 +39,7 @@ public class MarcaController {
     public ApiResponse<MarcaResponse> create(@Valid @RequestBody MarcaRequest request) {
         Marca marca = new Marca();
         marca.setNombre(request.getNombre());
+        marca.setCategoria(request.getCategoria());
         marca.setCreatedBy("system");
 
         Marca saved = marcaRepository.save(marca);
@@ -57,6 +59,7 @@ public class MarcaController {
         MarcaResponse r = new MarcaResponse();
         r.setId(m.getId());
         r.setNombre(m.getNombre());
+        r.setCategoria(m.getCategoria());
         r.setCreatedAt(m.getCreatedAt());
         return r;
     }

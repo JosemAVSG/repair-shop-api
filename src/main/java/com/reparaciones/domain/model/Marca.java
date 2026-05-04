@@ -7,6 +7,7 @@ import java.util.List;
 public class Marca {
     private Long id;
     private String nombre;
+    private CategoriaMarca categoria;
     private List<Modelo> modelos = new ArrayList<>();
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
@@ -14,15 +15,18 @@ public class Marca {
 
     public Marca() {}
 
-    public Marca(Long id, String nombre) {
+    public Marca(Long id, String nombre, CategoriaMarca categoria) {
         this.id = id;
         this.nombre = nombre;
+        this.categoria = categoria;
     }
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
+    public CategoriaMarca getCategoria() { return categoria; }
+    public void setCategoria(CategoriaMarca categoria) { this.categoria = categoria; }
     public List<Modelo> getModelos() { return modelos; }
     public void setModelos(List<Modelo> modelos) { this.modelos = modelos; }
     public LocalDateTime getCreatedAt() { return createdAt; }

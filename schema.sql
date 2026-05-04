@@ -4,6 +4,7 @@
 CREATE TABLE marcas (
     id BIGSERIAL PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL UNIQUE,
+    categoria VARCHAR(20) NOT NULL CHECK (categoria IN ('CELULARES', 'LINEA_BLANCA')),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_by VARCHAR(50)
@@ -39,6 +40,7 @@ CREATE TABLE clientes (
 
 CREATE TABLE dispositivos (
     id BIGSERIAL PRIMARY KEY,
+    tipo VARCHAR(20) NOT NULL CHECK (tipo IN ('CELULAR', 'MICROONDAS', 'NEVERA', 'COCINA', 'LAVADORA')),
     modelo_id BIGINT NOT NULL REFERENCES modelos(id),
     cliente_id BIGINT NOT NULL REFERENCES clientes(id),
     numero_serie VARCHAR(50),

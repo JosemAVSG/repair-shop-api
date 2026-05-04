@@ -2,6 +2,7 @@ package com.reparaciones.infrastructure.persistence.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import com.reparaciones.domain.model.TipoDispositivo;
 
 @Entity
 @Table(name = "dispositivos")
@@ -10,6 +11,10 @@ public class DispositivoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "tipo", nullable = false)
+    private TipoDispositivo tipo;
 
     @Column(name = "modelo_id", nullable = false)
     private Long modeloId;
@@ -36,6 +41,8 @@ public class DispositivoEntity {
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
+    public TipoDispositivo getTipo() { return tipo; }
+    public void setTipo(TipoDispositivo tipo) { this.tipo = tipo; }
     public Long getModeloId() { return modeloId; }
     public void setModeloId(Long modeloId) { this.modeloId = modeloId; }
     public Long getClienteId() { return clienteId; }

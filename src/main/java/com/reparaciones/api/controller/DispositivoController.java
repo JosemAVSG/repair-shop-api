@@ -1,6 +1,7 @@
 package com.reparaciones.api.controller;
 
 import com.reparaciones.domain.model.Dispositivo;
+import com.reparaciones.domain.model.TipoDispositivo;
 import com.reparaciones.domain.repository.DispositivoRepository;
 import com.reparaciones.api.dto.*;
 import jakarta.validation.Valid;
@@ -45,6 +46,7 @@ public class DispositivoController {
     @PostMapping
     public ApiResponse<DispositivoResponse> create(@Valid @RequestBody DispositivoRequest request) {
         Dispositivo dispositivo = new Dispositivo();
+        dispositivo.setTipo(request.getTipo());
         dispositivo.setModeloId(request.getModeloId());
         dispositivo.setClienteId(request.getClienteId());
         dispositivo.setNumeroSerie(request.getNumeroSerie());
@@ -60,6 +62,7 @@ public class DispositivoController {
     public ApiResponse<DispositivoResponse> update(@PathVariable Long id, @RequestBody DispositivoRequest request) {
         return dispositivoRepository.findById(id)
                 .map(d -> {
+                    d.setTipo(request.getTipo());
                     d.setNumeroSerie(request.getNumeroSerie());
                     d.setImei(request.getImei());
                     d.setNotasTecnicas(request.getNotasTecnicas());
@@ -80,6 +83,7 @@ public class DispositivoController {
     private DispositivoResponse toResponse(Dispositivo d) {
         DispositivoResponse r = new DispositivoResponse();
         r.setId(d.getId());
+        r.setTipo(d.getTipo());
         r.setModeloId(d.getModeloId());
         r.setClienteId(d.getClienteId());
         r.setNumeroSerie(d.getNumeroSerie());
@@ -90,12 +94,15 @@ public class DispositivoController {
     }
 
     public static class DispositivoRequest {
+        private TipoDispositivo tipo;
         private Long modeloId;
         private Long clienteId;
         private String numeroSerie;
         private String imei;
         private String notasTecnicas;
 
+        public TipoDispositivo getTipo() { return tipo; }
+        public void setTipo(TipoDispositivo tipo) { this.tipo = tipo; }
         public Long getModeloId() { return modeloId; }
         public void setModeloId(Long modeloId) { this.modeloId = modeloId; }
         public Long getClienteId() { return clienteId; }
@@ -110,6 +117,7 @@ public class DispositivoController {
 
     public static class DispositivoResponse {
         private Long id;
+        private TipoDispositivo tipo;
         private Long modeloId;
         private Long clienteId;
         private String numeroSerie;
@@ -119,6 +127,8 @@ public class DispositivoController {
 
         public Long getId() { return id; }
         public void setId(Long id) { this.id = id; }
+        public TipoDispositivo getTipo() { return tipo; }
+        public void setTipo(TipoDispositivo tipo) { this.tipo = tipo; }
         public Long getModeloId() { return modeloId; }
         public void setModeloId(Long modeloId) { this.modeloId = modeloId; }
         public Long getClienteId() { return clienteId; }
