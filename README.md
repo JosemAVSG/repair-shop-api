@@ -119,10 +119,10 @@ Este proyecto está bajo licencia privada.
 - [x] Estados de orden con historial
 - [x] Clientes y dispositivos
 - [x] API REST documentada con Swagger
+- [x] Inventario de repuestos con stock mínimo
 
 ### 🔜 Por implementar (Prioridad Alta)
 - [ ] Presupuestos y aprobación de clientes
-- [ ] Inventario de repuestos con stock mínimo
 - [ ] Pagos parciales y generación de recibos PDF
 - [ ] Fotos del equipo al recibir
 - [ ] Checklist de recepción
@@ -152,3 +152,9 @@ Este proyecto está bajo licencia privada.
 | GET | /api/clientes/{id} | Obtener cliente |
 | PUT | /api/clientes/{id} | Actualizar cliente |
 | DELETE | /api/clientes/{id} | Eliminar cliente |
+| GET | /api/ordenes | Listar órdenes |
+| POST | /api/ordenes | Crear orden |
+| PUT | /api/ordenes/{id}/estado | Cambiar estado |
+| GET | /api/repuestos | Listar repuestos |
+| POST | /api/repuestos | Crear repuesto |
+| GET | /api/repuestos/bajo-stock | Repuestos bajo stock mínimo |
