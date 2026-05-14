@@ -1,6 +1,6 @@
 package com.reparaciones.api.dto;
 
-import com.reparaciones.domain.model.TipoReparacion;
+import com.reparaciones.domain.enums.TipoReparacion;
 import java.time.LocalDateTime;
 
 public class TarifaResponse {

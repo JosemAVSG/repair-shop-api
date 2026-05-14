@@ -1,6 +1,6 @@
 package com.reparaciones.infrastructure.persistence.repository;
 
-import com.reparaciones.domain.model.TipoReparacion;
+import com.reparaciones.domain.enums.TipoReparacion;
 import com.reparaciones.infrastructure.persistence.entity.ReparacionEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;

@@ -1,8 +1,9 @@
 package com.reparaciones.domain.repository;
 
-import com.reparaciones.domain.model.Cliente;
 import java.util.List;
 import java.util.Optional;
+
+import com.reparaciones.domain.model.Cliente;
 
 public interface ClienteRepository {
     List<Cliente> findAll();

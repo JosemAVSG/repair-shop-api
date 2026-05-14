@@ -1,7 +1,8 @@
 package com.reparaciones.domain.repository;
 
-import com.reparaciones.domain.model.EstadoOrden;
+import com.reparaciones.domain.enums.EstadoOrden;
 import com.reparaciones.domain.model.OrdenTrabajo;
+
 import java.util.List;
 import java.util.Optional;
 

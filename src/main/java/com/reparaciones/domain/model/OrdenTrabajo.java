@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.reparaciones.domain.enums.EstadoOrden;
+
 public class OrdenTrabajo {
     private Long id;
     private Long clienteId;

@@ -2,6 +2,8 @@ package com.reparaciones.domain.model;
 
 import java.time.LocalDateTime;
 
+import com.reparaciones.domain.enums.TipoReparacion;
+
 public class Reparacion {
     private Long id;
     private Long ordenId;

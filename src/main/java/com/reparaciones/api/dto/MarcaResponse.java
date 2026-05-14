@@ -1,7 +1,7 @@
 package com.reparaciones.api.dto;
 
 import java.time.LocalDateTime;
-import com.reparaciones.domain.model.CategoriaMarca;
+import com.reparaciones.domain.enums.CategoriaMarca;
 
 public class MarcaResponse {
     private Long id;

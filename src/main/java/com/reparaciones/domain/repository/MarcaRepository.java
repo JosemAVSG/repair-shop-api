@@ -1,8 +1,9 @@
 package com.reparaciones.domain.repository;
 
-import com.reparaciones.domain.model.Marca;
 import java.util.List;
 import java.util.Optional;
+
+import com.reparaciones.domain.model.Marca;
 
 public interface MarcaRepository {
     List<Marca> findAll();

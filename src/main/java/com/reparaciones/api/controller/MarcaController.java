@@ -1,7 +1,7 @@
 package com.reparaciones.api.controller;
 
+import com.reparaciones.domain.enums.CategoriaMarca;
 import com.reparaciones.domain.model.Marca;
-import com.reparaciones.domain.model.CategoriaMarca;
 import com.reparaciones.domain.repository.MarcaRepository;
 import com.reparaciones.api.dto.*;
 import jakarta.validation.Valid;

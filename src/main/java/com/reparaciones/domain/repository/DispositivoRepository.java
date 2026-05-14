@@ -1,8 +1,9 @@
 package com.reparaciones.domain.repository;
 
-import com.reparaciones.domain.model.Dispositivo;
 import java.util.List;
 import java.util.Optional;
+
+import com.reparaciones.domain.model.Dispositivo;
 
 public interface DispositivoRepository {
     List<Dispositivo> findAll();

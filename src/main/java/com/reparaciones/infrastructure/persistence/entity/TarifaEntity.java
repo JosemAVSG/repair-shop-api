@@ -1,6 +1,6 @@
 package com.reparaciones.infrastructure.persistence.entity;
 
-import com.reparaciones.domain.model.TipoReparacion;
+import com.reparaciones.domain.enums.TipoReparacion;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 

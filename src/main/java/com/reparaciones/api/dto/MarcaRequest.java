@@ -1,6 +1,6 @@
 package com.reparaciones.api.dto;
 
-import com.reparaciones.domain.model.CategoriaMarca;
+import com.reparaciones.domain.enums.CategoriaMarca;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 

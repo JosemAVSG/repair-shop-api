@@ -1,6 +1,6 @@
 package com.reparaciones.infrastructure.persistence.repository;
 
-import com.reparaciones.domain.model.EstadoOrden;
+import com.reparaciones.domain.enums.EstadoOrden;
 import com.reparaciones.infrastructure.persistence.entity.OrdenEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;

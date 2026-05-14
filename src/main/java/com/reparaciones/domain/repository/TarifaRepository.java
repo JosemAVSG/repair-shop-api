@@ -1,7 +1,8 @@
 package com.reparaciones.domain.repository;
 
+import com.reparaciones.domain.enums.TipoReparacion;
 import com.reparaciones.domain.model.Tarifa;
-import com.reparaciones.domain.model.TipoReparacion;
+
 import java.util.List;
 import java.util.Optional;
 

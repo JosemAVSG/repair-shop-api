@@ -1,6 +1,6 @@
 package com.reparaciones.infrastructure.persistence.entity;
 
-import com.reparaciones.domain.model.EstadoOrden;
+import com.reparaciones.domain.enums.EstadoOrden;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;

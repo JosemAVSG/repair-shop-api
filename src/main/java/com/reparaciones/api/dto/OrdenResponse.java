@@ -1,6 +1,6 @@
 package com.reparaciones.api.dto;
 
-import com.reparaciones.domain.model.EstadoOrden;
+import com.reparaciones.domain.enums.EstadoOrden;
 import java.time.LocalDateTime;
 import java.util.List;
 

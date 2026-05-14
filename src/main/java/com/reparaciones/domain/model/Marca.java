@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.reparaciones.domain.enums.CategoriaMarca;
+
 public class Marca {
     private Long id;
     private String nombre;

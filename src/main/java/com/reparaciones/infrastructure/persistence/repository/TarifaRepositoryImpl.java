@@ -1,7 +1,7 @@
 package com.reparaciones.infrastructure.persistence.repository;
 
+import com.reparaciones.domain.enums.TipoReparacion;
 import com.reparaciones.domain.model.Tarifa;
-import com.reparaciones.domain.model.TipoReparacion;
 import com.reparaciones.domain.repository.TarifaRepository;
 import com.reparaciones.infrastructure.persistence.mapper.TarifaMapper;
 import org.springframework.stereotype.Repository;

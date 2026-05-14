@@ -1,7 +1,7 @@
 package com.reparaciones.api.controller;
 
+import com.reparaciones.domain.enums.TipoDispositivo;
 import com.reparaciones.domain.model.Dispositivo;
-import com.reparaciones.domain.model.TipoDispositivo;
 import com.reparaciones.domain.repository.DispositivoRepository;
 import com.reparaciones.api.dto.*;
 import io.swagger.v3.oas.annotations.Operation;

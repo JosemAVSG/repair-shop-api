@@ -2,7 +2,7 @@ package com.reparaciones.infrastructure.persistence.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
-import com.reparaciones.domain.model.CategoriaMarca;
+import com.reparaciones.domain.enums.CategoriaMarca;
 
 @Entity
 @Table(name = "marcas")

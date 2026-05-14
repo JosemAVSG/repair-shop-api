@@ -2,6 +2,8 @@ package com.reparaciones.domain.model;
 
 import java.time.LocalDateTime;
 
+import com.reparaciones.domain.enums.TipoReparacion;
+
 public class Tarifa {
     private Long id;
     private Long marcaId;

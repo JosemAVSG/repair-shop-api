@@ -1,4 +1,4 @@
-package com.reparaciones.domain.model;
+package com.reparaciones.domain.enums;
 
 public enum TipoOperacion {
     CAMBIO_PANTALLA,

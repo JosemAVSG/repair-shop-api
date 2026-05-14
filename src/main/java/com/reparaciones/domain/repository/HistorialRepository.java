@@ -1,7 +1,8 @@
 package com.reparaciones.domain.repository;
 
-import com.reparaciones.domain.model.HistorialEntrada;
 import java.util.List;
+
+import com.reparaciones.domain.model.HistorialEntrada;
 
 public interface HistorialRepository {
     List<HistorialEntrada> findAll();

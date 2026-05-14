@@ -1,6 +1,6 @@
 package com.reparaciones.infrastructure.persistence.repository;
 
-import com.reparaciones.domain.model.EstadoOrden;
+import com.reparaciones.domain.enums.EstadoOrden;
 import com.reparaciones.domain.model.OrdenTrabajo;
 import com.reparaciones.domain.repository.OrdenRepository;
 import com.reparaciones.infrastructure.persistence.mapper.OrdenMapper;

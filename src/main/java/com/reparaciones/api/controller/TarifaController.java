@@ -1,5 +1,6 @@
 package com.reparaciones.api.controller;
 
+import com.reparaciones.domain.enums.TipoReparacion;
 import com.reparaciones.domain.model.Tarifa;
 import com.reparaciones.domain.repository.TarifaRepository;
 import com.reparaciones.api.dto.*;
@@ -53,7 +54,7 @@ public class TarifaController {
 
     @GetMapping("/modelo/{modeloId}/tipo/{tipo}")
     public ApiResponse<TarifaResponse> getByModeloAndTipo(@PathVariable Long modeloId,
-                                                           @PathVariable com.reparaciones.domain.model.TipoReparacion tipo) {
+            @PathVariable TipoReparacion tipo) {
         return tarifaRepository.findByModeloIdAndTipo(modeloId, tipo)
                 .map(t -> ApiResponse.success(toResponse(t)))
                 .orElse(ApiResponse.error("Tarifa no encontrada"));
